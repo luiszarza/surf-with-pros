@@ -1,63 +1,78 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
+#navbar {
+  .navbar-lewagon {
+    justify-content: space-between;
+    background: white;
+  }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+  .navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
+  }
 
-.navbar-lewagon .navbar-brand img {
-  width: 50px;
-}
+  .navbar-lewagon .navbar-brand img {
+    width: 50px;
+  }
 
-.navbar-brand {
-  margin-top: 40px;
-}
+  .navbar-brand {
+    margin-top: 40px;
+  }
 
-.container-fluid {
-  height: 80px;
-}
+  .container-fluid {
+    height: 80px;
+    align-items: center;
+  }
 
-.avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  align-items: end;
-  box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
-  -webkit-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
-  -moz-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
-  margin-top: 2%;
-  margin-right: 2%;
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-items: end;
+    box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
+    -webkit-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
+    -moz-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
+    margin-top: 2%;
+    margin-right: 2%;
 
-}
+  }
 
-.nav-item {
-  display: flex;
-  align-items: center;
-}
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
 
-.btn-primary {
-  display: inline-block;
-  border-radius: 50%;
-  background-color: #5FAAB1;
-  color: #fff;
-  padding: 10px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
-  -webkit-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
-  -moz-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
-}
+  .btn-primary {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #5FAAB1;
+    color: #fff;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
+    -webkit-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
+    -moz-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
+  }
 
-.btn-primary i {
-  font-size: 24px;
-}
+  .btn-primary i {
+    font-size: 24px;
+  }
 
-.form-control {
-  border-radius: 30px;
-  box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
--webkit-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
--moz-box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.38);
+  .form-control {
+    border-radius: 30px;
+    box-shadow: 7px 10px 27px 0px rgba(191,176,176,0.75);
+    -webkit-box-shadow: 7px 10px 27px 0px rgba(191,176,176,0.75);
+    -moz-box-shadow: 7px 10px 27px 0px rgba(191,176,176,0.75);
+  }
+
+  #logo {
+    height: 100%;
+    margin-top: 0;
+    align-self: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }

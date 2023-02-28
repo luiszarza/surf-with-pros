@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+    raise
     @booking = Booking.new(booking_params)
     @listing = Listing.find(params[:listing_id])
     @booking.listing = @listing
