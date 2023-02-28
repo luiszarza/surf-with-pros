@@ -1,5 +1,4 @@
 .container {
-  margin: 20px auto;
   max-width: 1200px;
   padding: 10px 10px;
   margin-top: 140px;
@@ -9,6 +8,8 @@
   margin-top:20px;
   margin-bottom:20px;
   margin-left: 20px;
+  border-radius: 2%;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 .profile-card-5 .btn{
   border-radius:2px;
@@ -24,16 +25,9 @@
 
 }
 .profile-card-5 .card-img-block img{
-  border-radius:5px;
+  border-radius:2%;
   box-shadow:0 0 10px rgba(0,0,0,0.63);
 }
-.profile-card-5 h5{
-  color:#4E5E30;
-  font-weight:600;
-}
-.profile-card-5 p{
-  font-size:14px;
-  font-weight:300;
 
   .container {
     margin: 20px auto;
@@ -52,10 +46,11 @@
     margin: 0 auto;
     position: relative;
     top: -20px;
+    max-height: 300px;
 
   }
   .profile-card-5 .card-img-block img{
-    border-radius:5px;
+    border-radius:6px;
     box-shadow:0 0 10px rgba(0,0,0,0.63);
   }
   .profile-card-5 h5{
@@ -76,4 +71,3 @@
     margin-top : 40px;
     margin-bottom: 20px;
   }
-}
