@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :listings do
     resources :bookings
   end
+  get "/profile", to: "pages#profile", as: :profile
 end
