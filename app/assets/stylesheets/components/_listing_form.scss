@@ -1,34 +1,38 @@
 #new_html {
 
-  body {
-    background-color: powderblue;
-  }
-
   form {
     background-color: white;
     margin: 5em;
     padding: 2em;
-    height: 500em;
     flex: 0, 0 auto;
   }
 
-  describe {
-    height: 20em;
+  #listing_content.form-control.string.optional {
+    height: 250px;
   }
 
-  other {
-    color: blue;
+  .inputter {
+    color: red;
+    width: 250px;
+    justify-content: center;
+    margin-left: auto;
   }
 
-  price {
-   color: green;
+  .mb-3.decimal.optional.listing_price {
+    color: red;
+    width: 250px;
+    justify-content: right;
+    margin-left: auto;
   }
 
-  button {
-    color: orange;
+  .btn.btn-flat {
+    color: white;
+    background-color: red;
   }
 
-
-
-
+  #my_form {
+    display: flex;
+    justify-content: end;
+    padding-top: 2em;
+  }
 }
