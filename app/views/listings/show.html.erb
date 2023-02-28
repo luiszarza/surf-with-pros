@@ -1,6 +1,6 @@
 <div class="container py-5">
   <div class="row">
-    <div class="col-12 col-md-8 offset-md-2">
+    <div class="col-12 col-md-8">
       <div class="card mb-4">
         <div class="card-header bg-white d-flex justify-content-between align-items-center">
           <%= link_to "Go back", listings_path, class: "btn btn-success text-white" %>
@@ -9,6 +9,7 @@
         </div>
         <div class="card-body">
           <h2 class="mb-3"><%= @listing.title %></h2>
+          <p class="mb-3"><%= @listing.location %></p>
           <div class="row">
             <div class="col-6">
               <div class="card">
@@ -21,13 +22,18 @@
               </div>
             </div>
           </div>
-          <p class="mb-3"><%= @listing.location %></p>
           <p class="mb-4"><%= @listing.content %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="card mb-4">
+        <div class="card-body bg-white">
           <h4 class="mb-3">$<%= @listing.price  %></h4>
-          <%= link_to "Book", "#", class: "btn btn-primary" %>
+          <%= link_to "Book", "#" , class: "btn btn-primary" %>
         </div>
       </div>
     </div>
   </div>
 </div>
-git
+
