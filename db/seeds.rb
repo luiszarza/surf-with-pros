@@ -26,7 +26,7 @@ puts "Database cleaned"
       title: Faker::Superhero.name,
       content: Faker::Company.catch_phrase,
       location: Faker::Address.state,
-      price: Faker::Number.decimal,
+      price: Faker::Commerce.price,
       user: user
     )
 
