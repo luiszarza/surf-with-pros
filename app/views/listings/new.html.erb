@@ -1,17 +1,18 @@
 <div id = "new_html">
-<body>
-
-
-  <form>
     <%= simple_form_for @listing do |f| %>
-      <other><%= f.input :title %></other>
-      <describe><%= f.input :content %></describe>
-      <%= f.input :location %>
-      <price><%= f.input :price %></price>
-      <button><%= f.submit class: 'btn btn-flat' %></button>
+      <%= f.input :title %>
+      <%= f.input :content %>
+      <%= f.input :location, wrapper_html: {class: 'inputter'} %>
+      <%= f.input :price %>
+      <div>
+  <label for="formFileLg" class="form-label">Upload photos</label>
+  <input class="form-control form-control-lg" id="formFileLg" type="file">
+</div>
+      <div id = "my_form">
+      <%= f.submit class: 'btn btn-flat' %>
+      </div>
     <% end  %>
-  </form>
 
 
-</body>
+
 </div>
