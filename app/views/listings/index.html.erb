@@ -1,8 +1,7 @@
-<div >
 <div class="container">
   <div class="my-4">
     <%= link_to "New Listing", new_listing_path, class: "btn-new" %>
-     </div>
+  </div>
   <div class="row g-4">
     <% @listings.each do |list| %>
       <div class="col-md-4 mt-4">
@@ -12,7 +11,7 @@
                 <img class="card-img-top" src="https://source.unsplash.com/random/650x430/?surfer/<%= list.title %>" alt="Card image cap">
               </div>
               <div class="card-body pt-0">
-                  <h5 class="card-title"><%= list.title %></h5>
+                <h5 class="card-title"><%= list.title %></h5>
                 <p class="card-text">From $ <%= list.price.to_i %> / h</p>
               </div>
           </div>
