@@ -11,6 +11,71 @@
   </head>
 
   <body>
+  <header>
+  <div class="empty">
+    <div class="top-navigation">
+      <div class="logo"><a href="#">airbnb</a></div>
+    <nav>
+      <div class="nav-menu">
+          <ul>
+            <li><a href="#" class="nav-link">Places to stay</a></li>
+            <li><a href="#" class="nav-link">Experiences</a></li>
+            <li><a href="#" class="nav-link">Online Experiences</a></li>
+          </ul>
+        </div>
+
+          <form class="search">
+            <div class="search-inputs">
+              <label for="location">
+                <div class="label">Location</div>
+                <input name="location" id="location" placeholder="Where are you going?"/>
+              </label>
+
+            </div>
+            <div class="search-inputs">
+              <label for="check-in">
+                <div class="label">Check in</div>
+                <input name="check-in" id="check-in" placeholder="Add dates"/>
+              </label>
+            </div>
+            <div class="search-inputs">
+              <label for="check-out">
+                <div class="label">Check out</div>
+                <input name="check-out" id="check-out" placeholder="Add dates"/>
+              </label>
+            </div>
+            <div class="search-inputs">
+              <label for="guests">
+                <div class="label">Guests</div>
+                <input name="guests" id="guests" placeholder="Add dates"/>
+              </label>
+            </div>
+            <div class="search-button">
+              <button onclick="preventDefault()"><i class="fas fa-search fa-xs"></i></button>
+            </div>
+          </form>
+      </nav> <!--   End nav   -->
+
+      <div class="cta">
+        <div>Become a host</div>
+        <button>
+          <i class="fas fa-globe"></i>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="profile-menu">
+          <div class="menu">
+            <span class="fas fa-grip-lines"></span>
+          </div>
+          <div class="profile-pic">
+            <span class="fas fa-user"></span>
+          </div>
+        </div>
+      </div>
+
+
+    </div> <!--   end .top-navigation -->
+  </div> <!--   end .empty -->
+</header>
 
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
