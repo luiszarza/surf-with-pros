@@ -19,6 +19,29 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  align-items: end;
 }
 
+.nav-item {
+  display: flex;
+  align-items: center;
+}
 
+.btn-primary {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #5FAAB1;
+  color: #fff;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.btn-primary i {
+  font-size: 24px;
+}
+
+.form-group {
+  border-radius: 15%;
+}
