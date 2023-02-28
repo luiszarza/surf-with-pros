@@ -6,5 +6,6 @@ class PagesController < ApplicationController
 
   def profile
     @all_bookings = current_user.bookings
+    @user = current_user
   end
 end

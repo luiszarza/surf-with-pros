@@ -1,1 +1,11 @@
-<h1>this is user profile</h1>
+<div class="container">
+  <p><strong>Email:</strong> <%= @user.email %></p>
+  <p>Name: <%= @user.first_name %></p>
+  <p>Bookings</p>
+  <% @all_bookings.each do |booking|%>
+    <div class="bg-primary p-3 rounded m-3">
+    <%= booking.date%>
+    </div>
+  <% end %>
+
+</div>
