@@ -1,17 +1,16 @@
 
-<div>
+<body>
 
 
-  <div>
+  <form>
     <%= simple_form_for @listing do |f| %>
-      <%= f.input :title %>
-      <%= f.input :location %>
-      <%= f.input :price %>
+      <other><%= f.input :title %></other>
       <%= f.input :content %>
-      <%= f.submit class: 'btn btn-flat' %>
-      <%= f.submit class: 'btn btn-flat' %>
+      <%= f.input :location %>
+      <price><%= f.input :price %></price>
+      <button><%= f.submit class: 'btn btn-flat' %></button>
     <% end  %>
-  </div>
+  </form>
 
 
-</div>
+</body>
