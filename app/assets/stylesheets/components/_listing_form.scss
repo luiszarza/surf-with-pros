@@ -1,28 +1,32 @@
 #new_html {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+
 
   form {
-    background-color: white;
-    margin: 5em;
-    padding: 2em;
-    flex: 0, 0 auto;
+    background-color: #ffffff;
+    padding: 5em;
+    width: 61%;
+    margin: 0 auto;
+
   }
 
-  #listing_content.form-control.string.optional {
-    height: 250px;
-  }
+  // #listing_content.form-control.string.optional {
+  //   height: 250px;
+  // }
 
   .inputter {
-    color: red;
     width: 250px;
     justify-content: center;
-    margin-left: auto;
+    /*margin-left: auto;*/
   }
 
   .mb-3.decimal.optional.listing_price {
-    color: red;
     width: 250px;
     justify-content: right;
-    margin-left: auto;
+    /*margin-left: auto;*/
   }
 
   .btn.btn-flat {
