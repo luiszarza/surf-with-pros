@@ -40,7 +40,13 @@
       <div class="card mb-4">
         <div class="card-body bg-white">
           <h4 class="mb-3">$<%= @listing.price  %></h4>
-          <%= link_to "Book", new_listing_booking_path(@listing), class: "btn-book" %>
+          <%= simple_form_for [@listing, @booking] do |f| %>
+  <%= f.input :date %>
+  <%= f.submit %>
+<% end %>
+<br>
+<%= link_to "Go back to listing", listings_path, class: "btn btn-primary text-white" %>
+
         </div>
       </div>
     </div>
