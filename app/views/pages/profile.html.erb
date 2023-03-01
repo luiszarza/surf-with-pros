@@ -9,8 +9,12 @@
         <div class="col">
           <div class="card bg-primary text-white rounded-3">
             <div class="card-body">
-              <%= booking.date %>
-              <%= booking.status %>
+              <div class="booking-date d-inline-block">
+                <%= booking.date %>
+              </div>
+              <div class="booking-status bg-white text-black d-inline-flex align-items-center rounded-pill px-2 me-2">
+                <%= booking.status %>
+              </div>
             </div>
           </div>
         </div>
