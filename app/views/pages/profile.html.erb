@@ -2,22 +2,28 @@
   <div class="card p-3">
     <div class="card-body">
       <p><strong>Email:</strong> <%= @user.email %></p>
-      <p>Name: <%= @user.first_name %></p>
+      <p><strong>Name</strong>: <%= @user.first_name.capitalize %></p>
       <h2>Bookings</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <% @all_bookings.each do |booking|%>
-        <div class="col">
-          <div class="card bg-primary text-white rounded-3">
-            <div class="card-body">
-              <div class="booking-date d-inline-block">
-                <%= booking.date %>
-              </div>
-              <div class="booking-status bg-white text-black d-inline-flex align-items-center rounded-pill px-2 me-2">
-                <%= booking.status %>
+          <div class="col">
+            <div class="card bg-primary text-white rounded-3">
+              <div class="card-body">
+                <div class="booking-date d-inline-block">
+                  <%= booking.date %>
+                </div>
+                <div class="booking-status bg-white text-black d-inline-flex align-items-center rounded-pill px-2 me-2">
+                  <%= booking.status %>
+                </div>
+                <% if booking.status == "pending" %>
+                  <div class="d-grid gap-1">
+                    <button class="btn btn-success rounded-pill px-2 me-2 mt-2" type="button">Accept</button>
+                    <button class="btn btn-danger rounded-pill px-2 me-2 mb-2" type="button">Decline</button>
+                  </div>
+                <% end %>
               </div>
             </div>
           </div>
-        </div>
         <% end %>
       </div>
     </div>
