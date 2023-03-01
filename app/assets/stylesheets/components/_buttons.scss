@@ -1,23 +1,25 @@
-#home {
-  .btn-blue {
-    background: $blue;
-    border-radius: 100px;
-    padding: 7px 24px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin: 0 15px;
-  }
+.btn-blue {
+  background: $blue;
+  border-radius: 100px;
+  padding: 7px 24px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 0 15px;
+}
 
-  .btn-book {
-    background: #D47F00;
-    border-radius: 100px;
-    padding: 7px 24px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin: 0 15px;
-  }
+.btn-book {
+  background: #D47F00;
+  border-radius: 100px;
+  padding: 7px 24px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 0 15px;
+}
+
+#home {
+
 
   .btn-home {
     background: white;
