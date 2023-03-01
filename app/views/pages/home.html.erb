@@ -1,6 +1,15 @@
-<div class="container">
+<div
+  id="home"
+  data-controller="home"
+>
+  <div class="logo-white">
+  <%= image_tag "whitelogo.png" %>
+  </div>
 
-<h1>Pages#home</h1>
-
-<%= link_to "All listings", listings_path %>
+  <div class="container text-center">
+    <h1 class="catch-phrase">Find your perfect surf teacher today!</h1>
+    <a href="/listings"><span>Enter</span>
+     <div class="liquid"></div>
+     </a>
+  </div>
 </div>
