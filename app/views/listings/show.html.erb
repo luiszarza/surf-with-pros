@@ -9,6 +9,15 @@
         <div class="card-body border border-0">
           <p class="mb-3"><%= @listing.location %></p>
           <div class="row">
+              <% if @listing.images.attached? %>
+                  <% @listing.images.each do |image| %>
+                    <div class="col-6">
+                      <div class="card border border-0">
+                        <%= cl_image_tag image.key, crop: :fill %>
+                      </div>
+                    </div>
+                  <% end %>
+               <% else %>
             <div class="col-6">
               <div class="card border border-0">
                 <img src="https://source.unsplash.com/random/650x430/?surfer/" class="card-img-top rounded-4" alt="...">
@@ -19,6 +28,8 @@
                 <img src="https://source.unsplash.com/random/650x430/?surf/" class="card-img-top rounded-4 " alt="...">
               </div>
             </div>
+               <% end %>
+
           </div>
         </div>
       </div>
