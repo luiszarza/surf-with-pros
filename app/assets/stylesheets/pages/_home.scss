@@ -5,19 +5,22 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  .logo-white {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    width: 120  px;
+    flex-shrink: 2;
+  }
+
+  .catch-phrase {
+    color: white;
+    font-family: "Pacifico";
+    font-size: 36px;
+  }
 }
 
 body {
   background-size: cover;
-}
-
-.logo-white {
-  display: flex;
-  align-items: center;
-}
-
-.catch-phrase {
-  color: white;
-  font-family: "Pacifico";
-  font-size: 32px;
 }

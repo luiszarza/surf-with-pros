@@ -6,4 +6,8 @@ class User < ApplicationRecord
   has_many :bookings # as student
   has_many :listings # as teacher
   has_many :bookings_as_teacher, through: :listings, source: :bookings
+  has_one_attached :photo
+
+  def teacher?
+  end
 end
