@@ -10,8 +10,10 @@
           <%= link_to "Go back", listings_path %>
 
         </div>
-        <div class="card-body border border-0">
-          <p class="mb-3"><%= @listing.location %></p>
+        <div class="card-body border border-0 mb-2">
+          <p class="my-2"><i class="fa-sharp fa-solid fa-location-dot"></i> <%= @listing.location %></p>
+          <p class="my-2"><i class="fa-solid fa-user"></i> Teacher's name: <%= @listing.user.first_name %></p>
+
           <div class="row">
               <% if @listing.photos.attached? %>
                   <% @listing.photos.each do |photo| %>
