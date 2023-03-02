@@ -10,11 +10,11 @@
         <div class="card-body border border-0">
           <p class="mb-3"><%= @listing.location %></p>
           <div class="row">
-              <% if @listing.images.attached? %>
-                  <% @listing.images.each do |image| %>
+              <% if @listing.photos.attached? %>
+                  <% @listing.photos.each do |photo| %>
                     <div class="col-6">
                       <div class="card border border-0">
-                        <%= cl_image_tag image.key, crop: :fill %>
+                        <%= cl_image_tag photo.key, crop: :fill %>
                       </div>
                     </div>
                   <% end %>
