@@ -10,7 +10,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body style="background-image: url('<%= image_path "home-bg.jpg" if current_page?('/')%>')">
+  <body <% if current_page?('/') %> style="background-image: url('<%= image_path "home-bg.jpg" %>'); background-size: cover;"<% end %>>
     <%= render 'shared/navbar' unless current_page?('/') %>
     <%= render "shared/flashes" %>
     <%= yield %>
