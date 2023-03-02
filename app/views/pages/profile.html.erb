@@ -3,7 +3,6 @@
     <div class="card-body">
       <p><strong>Email:</strong> <%= @user.email %></p>
       <p><strong>Name</strong>: <%= @user.first_name %></p>
-
       <% if @my_bookings.present? || @my_bookings_as_student.present? %>
         <% if @my_bookings.present? %>
           <h2>My bookings</h2>
@@ -14,7 +13,6 @@
           </div>
           <br>
         <% end %>
-
         <% if @my_bookings_as_student.present? %>
           <h2>My Classes</h2>
           <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -26,7 +24,15 @@
       <% else %>
         <p>You have no bookings or classes</p>
       <% end %>
+      <br>
+      <% if @my_listings.present? %>
+            <h2>My Listings</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <% @my_listings.each do |listing| %>
+                <%= render 'shared/listing_preview', listing: listing %>
+              <% end %>
+            </div>
+          <% end %>
     </div>
   </div>
 </div>
-
