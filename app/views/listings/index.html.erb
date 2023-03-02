@@ -1,8 +1,5 @@
 <div class="container">
-  <div class="my-4">
-    <%= link_to "New Listing", new_listing_path, class: "btn-blue" %>
-  </div>
-  <div class="row g-4">
+  <div class="row g-4 mt-4">
     <% @listings.each do |list| %>
       <div class="col-md-4 mt-4">
         <%= link_to list, class: "text-decoration-none" do %>

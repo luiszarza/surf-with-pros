@@ -9,5 +9,10 @@ class User < ApplicationRecord
   has_one_attached :photo
 
   def teacher?
+    listings.any?
+  end
+
+  def is
+    
   end
 end

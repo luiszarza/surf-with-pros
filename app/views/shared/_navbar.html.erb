@@ -10,9 +10,9 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
+        <ul class="d-flex navbar-nav justify-content-center align-items-center">
 
-          <li class="nav-item me-5">
+          <%# <li class="nav-item me-5">
             <form class="d-flex">
               <div class="form-group me-2">
                 <select class="form-control">
@@ -27,8 +27,13 @@
               </div>
               <button class="btn btn-primary me-2" type="submit"><i class="fa fa-search"></i></button>
             </form>
+          </li> %>
+          <li class="me-5">
+            <%= link_to "New Listing", new_listing_path, class: "" %>
+
           </li>
           <li class="nav-item dropdown ">
+
             <% if !user_signed_in? %>
                 <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
               <% end %>
