@@ -5,8 +5,11 @@ Rails.application.routes.draw do
 
   # root to: "listings#index"
   resources :listings do
-    resources :bookings
+    resources :bookings, only: [:index, :create, :new]
   end
+
+  resources :bookings, only: [:edit, :update, :destroy]
+
   get "/profile", to: "pages#profile", as: :profile
   get "/home", to: "pages#home", as: :home
 end

@@ -15,10 +15,20 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.status = "pending"
     if @booking.save
-      redirect_to profile_path(@booking.user)
+      redirect_to profile_path
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def update
+    # grab the booking
+    # update the status to Accept/Reject
+    # redirect to profile
+    @booking = Booking.find(params[:id])
+    @booking.status = params[:status]
+    @booking.save
+    redirect_to profile_path
   end
 
   private
