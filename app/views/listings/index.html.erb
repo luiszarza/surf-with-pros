@@ -8,7 +8,11 @@
         <%= link_to list, class: "text-decoration-none" do %>
           <div class="card profile-card-5">
               <div class="card-img-block">
+              <% if list.images.attached? %>
+                <%= cl_image_tag list.images[0].key, crop: :fill %>
+               <% else %>
                 <img class="card-img-top" src="https://source.unsplash.com/random/650x430/?surfer/<%= list.title %>" alt="Card image cap">
+               <% end %>
               </div>
               <div class="card-body pt-0">
                 <h5 class="card-title"><%= list.title %></h5>
