@@ -3,18 +3,30 @@
     <div class="card-body">
       <p><strong>Email:</strong> <%= @user.email %></p>
       <p><strong>Name</strong>: <%= @user.first_name %></p>
-      <h2>My bookings</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <% @my_bookings.each do |booking|%>
-          <%= render 'shared/booking_preview', booking: booking %>
+
+      <% if @my_bookings.present? || @my_bookings_as_student.present? %>
+        <% if @my_bookings.present? %>
+          <h2>My bookings</h2>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% @my_bookings.each do |booking|%>
+              <%= render 'shared/booking_preview', booking: booking %>
+            <% end %>
+          </div>
+          <br>
         <% end %>
-      </div>
-      <br>
-      <h2>My Classes</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-         <% @my_bookings_as_student.each do | booking | %>
-          <%= render 'shared/booking_preview', booking: booking %>
+
+        <% if @my_bookings_as_student.present? %>
+          <h2>My Classes</h2>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% @my_bookings_as_student.each do | booking | %>
+              <%= render 'shared/booking_preview', booking: booking %>
+            <% end %>
+          </div>
         <% end %>
+      <% else %>
+        <p>You have no bookings or classes</p>
+      <% end %>
     </div>
   </div>
 </div>
+
