@@ -1,6 +1,6 @@
 <%= simple_form_for [@listing, @booking] do |f| %>
   <%= f.input :date %>
-  <%= f.submit %>
+  <%= f.submit "Book a session", class: "btn-blue" %>
 <% end %>
 <br>
 <%= link_to "Go back to listing", listings_path, class: "btn btn-primary text-white" %>
