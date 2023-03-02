@@ -9,7 +9,7 @@
           <div class="card profile-card-5">
               <div class="card-img-block">
               <% if list.photos.attached? %>
-                <%= cl_image_tag list.photos[0].key, crop: :fill %>
+                <%= cl_image_tag list.photos[0].key, crop: :fill, class: "card-img-top" %>
                <% else %>
                 <img class="card-img-top" src="https://source.unsplash.com/random/650x430/?surfer/<%= list.title %>" alt="Card image cap">
                <% end %>

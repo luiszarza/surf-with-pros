@@ -14,7 +14,7 @@
                   <% @listing.photos.each do |photo| %>
                     <div class="col-6">
                       <div class="card border border-0">
-                        <%= cl_image_tag photo.key, crop: :fill %>
+                        <%= cl_image_tag photo.key, crop: :fill, class:"card-img-top img-listing-ins rounded-4" %>
                       </div>
                     </div>
                   <% end %>
