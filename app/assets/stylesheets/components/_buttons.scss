@@ -1,4 +1,4 @@
-.btn-blue, .btn-blue-go-back {
+.btn-blue {
   background: $blue;
   border-radius: 100px;
   padding: 7px 24px;
@@ -10,7 +10,29 @@
 }
 
 .btn-blue-go-back {
-  margin-top: 15px;
+  margin-top: 3px;
+  position: absolute;
+  height: 40px;
+  width: 110px;
+  font-size: 18px;
+  background: $blue;
+  border-radius: 100px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "pacifico";
+  text-align: center;
+  padding: 7px 24px;
+}
+
+.btn-red {
+  background: $red;
+  border-radius: 100px;
+  padding: 7px 24px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "pacifico";
+  font-size: 1.2em;
+  margin: 0 15px;
 }
 
 .btn-book {
