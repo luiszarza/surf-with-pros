@@ -1,6 +1,8 @@
-
+<div
+  data-controller="edit-listing"
+>
     <%= simple_form_for @listing do |f| %>
-      <%= f.input :title %>
+      <%= f.input :title, input_html: { class: 'special' } %>
       <%= f.input :content, as: :text %>
       <%= f.input :location, wrapper_html: {class: 'inputter'} %>
       <%= f.input :price %>
@@ -13,3 +15,4 @@
       <%= f.submit class: 'btn-red border-0' %>
       </div>
     <% end  %>
+</div>
