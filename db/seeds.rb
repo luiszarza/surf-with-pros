@@ -68,12 +68,12 @@ listings.each do |listing|
   # file = URI.open(files[i][0])
   # file2 = URI.open(files[i][1])
   file = URI.open("https://source.unsplash.com/random/650x430/?surfer")
-  file2 = URI.open("https://source.unsplash.com/random/650x430/?surfer")
+  file2 = URI.open("https://source.unsplash.com/random/650x430/?surfers")
   puts "Attaching photo 1 of ##{i}"
   listing.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
   listing.save
   puts "Attaching photo 2 of ##{i}"
-  listing.photos.attach(io: file2, filename: "nes.png", content_type: "image/png")
+  listing.photos.attach(io: file2, filename: "nes2.png", content_type: "image/png")
   listing.save
   i += 1
 end
