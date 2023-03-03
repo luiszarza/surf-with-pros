@@ -1,12 +1,12 @@
-<div class="card">
-  <div class="card-body">
+<%# <div class="card"> %>
+  <div class="card-blue">
     <h5 class="card-title">
       <%= link_to listing.title, listing_path(listing) %>
     </h5>
     <p class="card-text"><%= listing.content %></p>
     <p class="card-text"><%= number_to_currency(listing.price) %></p>
     <% if user_signed_in? && listing.user == current_user %>
-      <%= link_to "Edit", edit_listing_path(listing), class: "btn btn-primary" %>
+      <%= link_to "Edit", edit_listing_path(listing), class: "btn-blue" %>
     <% end %>
   </div>
-</div>
+<%# </div> %>
