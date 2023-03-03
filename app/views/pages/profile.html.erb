@@ -6,6 +6,7 @@
       <% if @my_bookings.present? || @my_bookings_as_student.present? %>
         <% if @my_bookings.present? %>
           <h2>My bookings</h2>
+          <br>
           <div class="row row-cols-1 row-cols-md-3 g-4">
             <% @my_bookings.each do |booking|%>
               <%= render 'shared/booking_preview', booking: booking %>
@@ -15,6 +16,7 @@
         <% end %>
         <% if @my_bookings_as_student.present? %>
           <h2>My Classes :</h2>
+          <br>
           <div class="row row-cols-1 row-cols-md-3 g-4">
             <% @my_bookings_as_student.each do | booking | %>
               <%= render 'shared/booking_preview', booking: booking %>
@@ -27,6 +29,7 @@
       <br>
       <% if @my_listings.present? %>
             <h2>My Listings</h2>
+            <br>
             <div class="row row-cols-1 row-cols-md-3 g-4">
               <% @my_listings.each do |listing| %>
                 <%= render 'shared/listing_preview', listing: listing %>

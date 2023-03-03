@@ -37,6 +37,7 @@ class ListingsController < ApplicationController
   end
 
   def destroy
+    # @restaurant = Restaurant.find(params[:id])
     @listing.destroy
     redirect_to listings_path, status: :see_other
   end
