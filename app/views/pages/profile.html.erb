@@ -3,6 +3,7 @@
     <div class="card-body">
       <p><strong>Email:</strong> <%= @user.email %></p>
       <p><strong>Name</strong>: <%= @user.first_name %></p>
+      <button>Edit profile</button>
       <% if @my_bookings.present? || @my_bookings_as_student.present? %>
         <% if @my_bookings.present? %>
           <h2>My bookings</h2>
