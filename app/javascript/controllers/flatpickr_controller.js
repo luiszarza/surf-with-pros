@@ -7,6 +7,8 @@ export default class extends Controller {
   static targets = [ "date" ]
 
   connect() {
+
     flatpickr(this.dateTarget, {})
+    this.dateTarget.insertAdjacentHTML('afterend', '<i class="booking-cal fa-solid fa-calendar-days"></i>');
   }
 }
