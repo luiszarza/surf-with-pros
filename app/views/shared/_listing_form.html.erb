@@ -1,6 +1,10 @@
+<h1 class="title-edit">Edit your listing:</h1>
+
+<div class= "card-blue-edit px-2">
 <div
   data-controller="edit-listing"
 >
+
     <%= simple_form_for @listing do |f| %>
       <%= f.input :title, input_html: { class: 'special' } %>
       <%= f.input :content, as: :text %>
@@ -15,4 +19,5 @@
       <%= f.submit class: 'btn-red border-0' %>
       </div>
     <% end  %>
+</div>
 </div>
