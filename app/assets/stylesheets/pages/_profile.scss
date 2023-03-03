@@ -2,7 +2,8 @@
   height: calc(100vh - 90px);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
+  margin-top: 7%;
 
     h2 {
       font-family: "pacifico";
@@ -30,7 +31,7 @@
 
     .bookings {
       width: 45%;
-      height: 65%;
+      // height: 65%;
     }
 
     .listings-box {
@@ -40,8 +41,9 @@
     .profile-side {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 65%;
+      justify-content: flex-start;
+      /* height: 50%; */
       width: 45%;
+      gap: 30px;
     }
   }
