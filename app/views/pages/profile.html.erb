@@ -1,33 +1,43 @@
 <div class="container" id="profile">
   <div class="card-profile p-3">
-    <div class="card-body d-flex justify-content-between">
-      <div class="bookings">
+    <div class="card-body">
+      <p><strong>Email:</strong> <%= @user.email %></p>
+      <p><strong>Name</strong>: <%= @user.first_name %></p>
+      <button>Edit profile</button>
+      <% if @my_bookings.present? || @my_bookings_as_student.present? %>
         <% if @my_bookings.present? %>
-          <h2>My Classes :</h2>
-          <% if @my_bookings_as_student.present? %>
-              <% @my_bookings_as_student.each do | booking | %>
-                <%= render 'shared/booking_preview', booking: booking %>
-              <% end %>
-          <% end %>
-        <% else %>
-          <p>You have no bookings or classes</p>
-        <% end %>
-        <% if @my_listings.present? %>
-
-        <div class="listings-box">
-          <h2>My Listings:</h2>
+          <h2>My bookings</h2>
+          <br>
           <div class="row row-cols-1 row-cols-md-3 g-4">
-            <% @my_listings.each do |listing| %>
-              <%= render 'shared/listing_preview', listing: listing %>
+            <% @my_bookings.each do |booking|%>
+              <%= render 'shared/booking_preview', booking: booking %>
+            <% end %>
+          </div>
+          <br>
+        <% end %>
+        <% if @my_bookings_as_student.present? %>
+          <h2>My Classes :</h2>
+          <br>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% @my_bookings.each do |booking| %>
+              <%= render 'shared/booking_preview', booking: booking %>
             <% end %>
           </div>
           </div>
         <% end %>
-      </div>
-      <div class="profile-details">
-        <p class="strong"><strong>Email:</strong> <%= @user.email %></p>
-        <p class="strong"><strong>Name</strong>: <%= @user.first_name %></p>
-      </div>
+      <% else %>
+        <p>You have no bookings or classes</p>
+      <% end %>
+      <br>
+      <% if @my_listings.present? %>
+            <h2>My Listings</h2>
+            <br>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <% @my_listings.each do |listing| %>
+                <%= render 'shared/listing_preview', listing: listing %>
+              <% end %>
+            </div>
+          <% end %>
     </div>
   </div>
 </div>
