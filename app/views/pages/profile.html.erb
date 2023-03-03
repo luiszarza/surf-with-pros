@@ -3,10 +3,10 @@
     <div class="card-body">
       <p><strong>Email:</strong> <%= @user.email %></p>
       <p><strong>Name</strong>: <%= @user.first_name %></p>
-      <button>Edit profile</button>
+      <a class="btn btn-primary" href="/users/edit" role="button">Edit Profile</a>
       <% if @my_bookings.present? || @my_bookings_as_student.present? %>
         <% if @my_bookings.present? %>
-          <h2>My bookings</h2>
+          <a class="btn btn-primary" href="users/edit" role="button">About</a>
           <div class="row row-cols-1 row-cols-md-3 g-4">
             <% @my_bookings.each do |booking|%>
               <%= render 'shared/booking_preview', booking: booking %>
