@@ -1,23 +1,20 @@
- <div class="col">
-    <%# <div class="card-blue"> %>
-      <div class="card-blue">
-        <div class="booking-date d-inline-block">
-          <%= booking.date %>
-        </div>
-        <div class="booking-status bg-primary text-black d-inline-flex align-items-center rounded-pill px-2 me-2">
-         <%= booking.status %>
-        </div>
-        <div class="container">
-          Class: <%= link_to booking.listing.title, listing_path(booking.listing) %>
-        </div>
-        <div class="booking-user d-inline-block">
-        </div>
-        <% if booking.status == "pending" && booking.listing.user == current_user %>
-          <div class="mt-3">
-            <%= link_to "Accept", booking_path(booking.id, status: 'Accepted'), data: { turbo_method: :patch }, class: "btn-green" %>
-            <%= link_to "Decline", booking_path(booking.id, status: 'Declined'), data: { turbo_method: :patch }, class: "btn-decline" %>
-          </div>
-        <% end %>
-      </div>
-    <%# </div> %>
+
+<div class="card-blue">
+  <div class="booking-date d-inline-block">
+    <%= booking.date %>
   </div>
+  <div class="booking-status bg-primary text-black d-inline-flex align-items-center rounded-pill px-2 me-2">
+    <%= booking.status %>
+  </div>
+  <div class="container">
+    Class: <%= link_to booking.listing.title, listing_path(booking.listing) %>
+  </div>
+  <div class="booking-user d-inline-block">
+  </div>
+  <% if booking.status == "pending" && booking.listing.user == current_user %>
+    <div class="mt-3">
+      <%= link_to "Accept", booking_path(booking.id, status: 'Accepted'), data: { turbo_method: :patch }, class: "btn-green" %>
+      <%= link_to "Decline", booking_path(booking.id, status: 'Declined'), data: { turbo_method: :patch }, class: "btn-decline" %>
+    </div>
+  <% end %>
+</div>

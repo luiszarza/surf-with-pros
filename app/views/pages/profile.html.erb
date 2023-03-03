@@ -1,40 +1,32 @@
 <div class="container" id="profile">
-  <div class="card-profile p-3">
-    <div class="card-body d-flex justify-content-between">
-      <div class="bookings">
-        <% if @my_bookings.present? %>
-          <h2>Bookings Requests</h2>
-          <br>
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-            <% @my_bookings.each do |booking|%>
-              <%= render 'shared/booking_preview', booking: booking %>
-            <% end %>
-          </div>
-          <br>
+  <div class="bookings">
+    <% if @my_bookings.present? %>
+      <h2>Bookings Requests</h2>
+        <% @my_bookings.each do |booking|%>
+          <%= render 'shared/booking_preview', booking: booking %>
         <% end %>
-        <% if @my_bookings_as_student.present? %>
-          <h2>My Classes</h2>
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-            <% @my_bookings.each do |booking| %>
-              <%= render 'shared/booking_preview', booking: booking %>
-            <% end %>
-          </div>
+    <% end %>
+    <% if @my_bookings_as_student.present? %>
+      <h2>My Classes</h2>
+        <% @my_bookings.each do |booking| %>
+          <%= render 'shared/booking_preview', booking: booking %>
         <% end %>
-      <% if @my_listings.present? %>
-            <h2>My Listings</h2>
-            <br>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-              <% @my_listings.each do |listing| %>
-                <%= render 'shared/listing_preview', listing: listing %>
-              <% end %>
-            </div>
-      <% end %>
-      </div>
-      <div class="profile-details">
-        <p class="strong"><strong>Email:</strong> <%= @user.email %></p>
-        <p class="strong"><strong>Name</strong>: <%= @user.first_name %></p>
-        <%= link_to "Edit Profile", edit_user_registration_path %>
-      </div>
+    <% end %>
+  </div>
+  <%# <div style="border-left:1px solid #000;height:100%"></div> %>
+  <div class="profile-side">
+    <div class="profile-details">
+      <p class="strong"><strong>Email:</strong> <%= @user.email %></p>
+      <p class="strong"><strong>Name</strong>: <%= @user.first_name %></p>
+      <%= link_to "Edit Profile", edit_user_registration_path %>
+    </div>
+    <div>
+    <% if @my_listings.present? %>
+          <h2>My Listings</h2>
+            <% @my_listings.each do |listing| %>
+              <%= render 'shared/listing_preview', listing: listing %>
+            <% end %>
+    <% end %>
     </div>
   </div>
 </div>

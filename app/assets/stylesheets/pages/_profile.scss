@@ -1,4 +1,9 @@
 #profile {
+  height: calc(100vh - 90px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
     h2 {
       font-family: "pacifico";
       color: $light-gray;
@@ -24,9 +29,17 @@
 
     .bookings {
       width: 50%;
+      height: 65%;
     }
 
     .listings-box {
       margin-top: 8%;
+    }
+
+    .profile-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 65%;
     }
   }
