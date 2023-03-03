@@ -8,7 +8,7 @@
     <% end %>
     <% if @my_bookings_as_student.present? %>
       <h2>My Classes</h2>
-        <% @my_bookings.each do |booking| %>
+        <% @my_bookings_as_student.each do |booking| %>
           <%= render 'shared/booking_preview', booking: booking %>
         <% end %>
     <% end %>
