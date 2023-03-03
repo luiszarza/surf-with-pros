@@ -1,12 +1,45 @@
-h2 {
-  font-family: "pacifico";
-  color: white;
-}
+#profile {
+  height: calc(100vh - 90px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.card-blue {
-  background-color: white;
-  padding: 24px;
-  border-radius: 15px;
-  border: 3px solid $lightblue;
-  color: black;
-}
+    h2 {
+      font-family: "pacifico";
+      color: $light-gray;
+    }
+
+    .card-blue {
+      background-color: white;
+      padding: 24px;
+      border-radius: 15px;
+      border: 3px solid $lightblue;
+      color: black;
+    }
+
+    .strong {
+      font-family: "pacifico";
+      font-size: 1.3em;
+      color: $light-gray;
+    }
+
+    .grid-container {
+      display: grid;
+    }
+
+    .bookings {
+      width: 50%;
+      height: 65%;
+    }
+
+    .listings-box {
+      margin-top: 8%;
+    }
+
+    .profile-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 65%;
+    }
+  }
