@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # root to: "listings#index"
   resources :listings do
-    resources :bookings, only: [:index, :create, :new]
+    resources :bookings, only: [:index, :create]
   end
 
   resources :bookings, only: [:edit, :update, :destroy]
