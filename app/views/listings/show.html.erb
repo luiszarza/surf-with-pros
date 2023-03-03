@@ -57,10 +57,12 @@
       <div class="card-blue mb-4">
         <div class="card-body bg-white">
           <h4 class="mb-3">$<%= @listing.price  %></h4>
-          <%= simple_form_for [@listing, @booking] do |f| %>
-            <%= f.input :date, class: "date-input" %>
-            <%= f.submit class: "btn-blue border-0" %>
-          <% end %>
+
+
+            <%= simple_form_for [@listing, @booking], data: { controller: 'flatpickr' } do |f| %>
+            <%= f.input :date, as: :string, placeholder: "Select your date", label: false, class: "flatpickwedfs", input_html: { data: { flatpickr_target: "date" } } %>
+            <%= f.submit 'Book your class', class: "btn-blue border-0" %>
+            <% end %>
         </div>
       </div>
     </div>
